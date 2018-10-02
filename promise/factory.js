@@ -3,7 +3,7 @@ const genPromise = a =>
     console.warn('<-- ', a)
     setTimeout(() => {
       console.warn('--> ', a)
-      r()
+      r(`resolved, ${a}`)
     }, 400 + Math.random() * 200)
   })
 
