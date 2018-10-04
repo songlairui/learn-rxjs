@@ -36,7 +36,7 @@ async function parallel(promiseFns, limit = 3) {
   payloads = [...promiseFns]
   operatingPayloads = [...payloads]
   const spoon = operatingPayloads.splice(0, limit).map(wrapPromise)
-  const end = await starter(spoon)
+  await starter(spoon)
 
   payloads = null
   operatingPayloads = null
